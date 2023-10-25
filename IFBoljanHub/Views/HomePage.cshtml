@@ -2,8 +2,36 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-	Layout = null;
+	Layout = "Master.cshtml";
 }
-<h1>@Model.Value("headerText")</h1>
+@{
+    var url = "";
+    var mediaItem = Model.Value<IPublishedContent>("heroImage");
 
-@await Html.PartialAsync("Players")
+    if (mediaItem != null)
+    {
+        url = mediaItem.Url();
+    }
+}
+
+<div>
+    <!--HERO START-->
+    <div class="text-center bg-image rounded-3" style="background-image: url(@url); width: 100vw; height: 50vh; background-size: cover;">
+        <div class="mask" style="background-color: rgba(255, 255, 255, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="container text-white">
+                    <h1 class="mb-3">@Model.Value("heroHeader")</h1>
+                    <h4 class="mb-3">@Model.Value("heroText")</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--HERO END-->
+   
+    <!--HOME CONTENT-->
+    <div class="bg-white">
+        <h1>@Model.Value("headerText")</h1>
+        <h4>@Model.Value("bodyText")</h4>
+    </div>
+    <!--HOME CONTENT END-->
+</div>
