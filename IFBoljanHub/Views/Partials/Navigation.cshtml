@@ -10,10 +10,6 @@
 
 @{ var menuItems = Model.Root().Children.Where(x => x.IsVisible(PublishedValueFallback)).ToArray(); }
 
-
-
-
-
 <nav class="navbar navbar-expand-lg navbar-light secondary-background px-2 shadow fixed-top">
   <div class="container-fluid mx-xl-3">
       <div id="logo">
@@ -27,7 +23,6 @@
                 }
             }
       </div>
-    
     <div class="d-flex justify-content-end">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-5 mb-2 mb-lg-0">
