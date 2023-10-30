@@ -1,7 +1,10 @@
-﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+﻿@using System.Globalization;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 
 <!-- Setup -->
 @{
+    const string CURRENT_CULTURE = "sv-SE";
+
     // Get the pageName from ViewData
     var pageName = ViewData["pageName"] as string;
 
@@ -13,23 +16,52 @@
         _ => "" // Will cause crash - maybe default to one of the above?
     });
 
-    var blogSelection = Umbraco.Content(blogSelectionGuid)
-        .ChildrenOfType("blogEntry")
+    var blogSelection = Umbraco.Content(blogSelectionGuid)!
+        .ChildrenOfType("blogEntry")!
         .Where(x => x.IsVisible())
         .OrderByDescending(x => x.CreateDate);
+
+    var blogTitle = Umbraco.Content(blogSelectionGuid)!.Value("blogTitle");
 }
 
 <!-- Render content -->
-<h2>@Model.Name's blogg</h2>
+<h2>@blogTitle</h2>
 <ul class="list-unstyled">
     @foreach (var item in blogSelection)
     {
-        var date = item.Value("blogDate") as DateTime?;
-        var shortDateString = date is not null ? date.Value.ToShortDateString() : "";
         <li>
-            <h2><a href="@item.Url()">@item.Value("blogTitle")</a></h2>
+            <h3><a href="@item.Url()">@item.Value("blogTitle")</a></h3>
             <p>@item.Value("blogContent")</p>
-            <p><small>Publicerat av @item.CreatorName() @shortDateString</small></p>
+            <p><small>Publicerat av @GetAlias(item) @GetDate(item)</small></p>
         </li>
     }
 </ul>
+
+<!-- Support methods -->
+@{
+    string GetDate(IPublishedContent item)
+    {
+        var date = item.Value("blogDate") as DateTime?;
+
+        if (date == default(DateTime))
+        {
+            date = item.CreateDate;
+        }
+
+        var culture = new CultureInfo(CURRENT_CULTURE);
+
+        return date.HasValue
+            ? date.Value.ToString("yyyy-MM-dd HH:mm", culture)
+            : "";
+    }
+
+    string GetAlias(IPublishedContent item)
+    {
+        var creatorAlias = item.Value("blogEntryAlias") as string;
+
+        if (string.IsNullOrEmpty(creatorAlias))
+            creatorAlias = item.CreatorName() ?? "";
+
+        return creatorAlias;
+    }
+}
