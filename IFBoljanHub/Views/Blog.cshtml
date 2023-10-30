@@ -1,8 +1,8 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Herr>
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Blog>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-    Layout = "Master.cshtml";
+	Layout = "Master.cshtml";
 }
 
 <br />
@@ -13,7 +13,7 @@
         <div class="col-md-8">
             <!-- Display the blog -->
             @{
-                ViewData["pageName"] = Model.Name;
+                ViewData["pageName"] = Model.Parent.Name;
             }
             @await Html.PartialAsync("BlogContent")
         </div>
