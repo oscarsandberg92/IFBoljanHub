@@ -31,10 +31,12 @@
                 
                     @foreach (var item in menuItems)
                     {
-                    @if(item is LoginPage) continue;
-                        <li class="nav-item mx-1">
-                            <a class="nav-link active header" aria-current="page" href="@item.Url(PublishedUrlProvider)">@item.Name</a>
-                        </li>
+                        @if(item is LoginPage) continue;  <!--- MOVING THE LOGGIN BUTTON TO A BUTTON ---> 
+                        @if(item is LoggedIn) continue;   <!--- MOVING THE LINK TO HIDDEN IN DEVELOPMENT ---> 
+                        
+                            <li class="nav-item mx-1">
+                                <a class="nav-link active header" aria-current="page" href="@item.Url(PublishedUrlProvider)">@item.Name</a>
+                            </li>
                     }
                 }
             </ul>
