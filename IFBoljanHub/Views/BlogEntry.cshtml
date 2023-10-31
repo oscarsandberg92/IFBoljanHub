@@ -1,6 +1,54 @@
-﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+﻿@using System.Globalization;
+@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.BlogEntry>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-	Layout = null;
+    Layout = "Master.cshtml";
+}
+
+<!-- Setup -->
+@{
+    const string CURRENT_CULTURE = "sv-SE";
+}
+
+<!-- Render content -->
+<br /><br />
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8">
+            <!-- Display the blog -->
+            <h2>@Model.Value("blogTitle")</h2>
+            <p>@Model.Value("blogContent")</p>
+            <p><small>Publicerat av @GetAlias() @GetDate()</small></p>
+        </div>
+    </div>
+</div>
+
+<!-- Support methods -->
+@{
+    string GetDate()
+    {
+        var date = Model.Value("blogDate") as DateTime?;
+
+        if (date == default(DateTime))
+        {
+            date = Model.CreateDate;
+        }
+
+        var culture = new CultureInfo(CURRENT_CULTURE);
+
+        return date.HasValue
+            ? date.Value.ToString("yyyy-MM-dd HH:mm", culture)
+            : "";
+    }
+
+    string GetAlias()
+    {
+        var creatorAlias = Model.Value("blogEntryAlias") as string;
+
+        if (string.IsNullOrEmpty(creatorAlias))
+            creatorAlias = Model.CreatorName() ?? "";
+
+        return creatorAlias;
+    }
 }
