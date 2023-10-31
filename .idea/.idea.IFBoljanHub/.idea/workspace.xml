@@ -8,9 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66a7f34a-c362-4ea4-841c-44f8c53b62b8" name="Changes" comment="Login Page Done&#10;Content Done">
-      <change beforePath="$PROJECT_DIR$/IFBoljanHub/wwwroot/css/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/wwwroot/css/globals.css" afterDir="false" />
-    </list>
+    <list default="true" id="66a7f34a-c362-4ea4-841c-44f8c53b62b8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +95,7 @@
       <updated>1697724880829</updated>
       <workItem from="1697724888534" duration="1712000" />
       <workItem from="1698323599005" duration="5161000" />
-      <workItem from="1698665070865" duration="5511000" />
+      <workItem from="1698665070865" duration="6945000" />
     </task>
     <task id="LOCAL−00001" summary="LoginPage added&#10;Content page to come">
       <option name="closed" value="true" />
@@ -113,7 +111,14 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1698673878910</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="Logged in">
+      <option name="closed" value="true" />
+      <created>1698737615277</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1698737615277</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +129,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="LoginPage added&#10;Content page to come" />
     <MESSAGE value="Login Page Done&#10;Content Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login Page Done&#10;Content Done" />
+    <MESSAGE value="Logged in" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logged in" />
   </component>
 </project>

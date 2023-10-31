@@ -32,35 +32,22 @@ main {
     padding: 0 0 0 0 !important;
 }
 
-/*
-.card {
-        background-size: cover;
-        background-position: center;
-        color: #fff;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-    }
+.divHover {
+    transition: transform 300ms ease-in-out;
+}
 
-.card:hover {
-        transform: scale(1.02);
-    }
-    
+.divHover:hover {
+    transform: scale(1.02, 1.02);
+}
+
 
 .content-card {
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-
-.content-card:hover {
-  transform: scale(1.02);
-}
-*/
+        background-size: cover;
+        background-position: center;
+        
+        padding: 0px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
 .footer-background{
     background: #0054A6;
