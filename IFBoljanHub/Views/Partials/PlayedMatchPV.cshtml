@@ -9,16 +9,7 @@
     var isIndividualEntry = ViewData["isIndividualEntry"] as bool?;
     var item = ViewData["item"] as IPublishedContent;
 
-    // Render content
-    // if (isIndividualEntry == true)
-    // {
-    //     <h2>@item!.Value("blogTitle")</h2>
-    // }
-    // else
-    // {
-    //     <h3><a href="@item!.Url()">@item!.Value("blogTitle")</a></h3>
-    // }
-
+    // Get match details
     var teamName = "IF Böljan Falkenberg";
     var homeMatch = item!.Value("matchHomeArena") as bool?;
     var opponent = item!.Value("matchOpponent") as string ?? "Okänd motståndare";
@@ -26,17 +17,37 @@
     var scoreHome = item!.Value("matchHomeScore") as int?;
     var date = item!.Value("matchDate") as DateTime?;
 
-    <div>
-        <a href="@item!.Url()">
-            <span>@GetHomePlayer()</span>
-            <span><strong>@scoreHome</strong></span>
-            <span>-</span>
-            <span><strong>@scoreAway</strong></span>
-            <span>@GetAwayPlayer()</span>
-        </a>
-    </div>
-
-    <p><small>@GetDate()</small></p>
+    // Render content
+    if (isIndividualEntry == true)
+    {
+        var analysis = item!.Value("matchAnalysis");
+        // Full match details (full page view)
+        <div>
+            <h3>
+                <span>@GetHomePlayer()</span>
+                <span><strong>@scoreHome</strong></span>
+                <span>-</span>
+                <span><strong>@scoreAway</strong></span>
+                <span>@GetAwayPlayer()</span>
+            </h3>
+            <p>@GetDate()</p>
+            <p>@analysis</p>
+        </div>
+    }
+    else
+    {
+        // Short match details (list view)
+        <div>
+            <a href="@item!.Url()">
+                <span>@GetHomePlayer()</span>
+                <span><strong>@scoreHome</strong></span>
+                <span>-</span>
+                <span><strong>@scoreAway</strong></span>
+                <span>@GetAwayPlayer()</span>
+            </a>
+            <p><small>@GetDate()</small></p>
+        </div>
+    }
 
     // Support methods
     string GetDate()

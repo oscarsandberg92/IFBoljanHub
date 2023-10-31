@@ -1,6 +1,25 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage;
-@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+
 @{
-	Layout = null;
+    Layout = "Master.cshtml";
 }
+
+<br />
+<br />
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8">
+            <!-- Display breadcrumbs -->
+            @await Html.PartialAsync("Breadcrumbs")
+
+            <!-- Display the played match -->
+            @{
+                ViewData["isIndividualEntry"] = true;
+                ViewData["item"] = Model;
+            }
+            @await Html.PartialAsync("PlayedMatchPV")
+        </div>
+    </div>
+</div>
