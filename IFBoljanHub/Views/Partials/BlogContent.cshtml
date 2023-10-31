@@ -21,11 +21,15 @@
         .Where(x => x.IsVisible())
         .OrderByDescending(x => x.CreateDate);
 
-    var blogTitle = Umbraco.Content(blogSelectionGuid)!.Value("blogTitle");
+    var blogTitle = Umbraco.Content(blogSelectionGuid)!.Value("blogTitle") as string;
 }
 
 <!-- Render content -->
-<h2>@blogTitle</h2>
+@if (!string.IsNullOrEmpty(blogTitle))
+{
+    <h2>@blogTitle</h2>
+}
+
 <ul class="list-unstyled">
     @foreach (var item in blogSelection)
     {
