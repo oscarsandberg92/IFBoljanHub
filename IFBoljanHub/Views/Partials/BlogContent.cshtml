@@ -3,8 +3,6 @@
 
 <!-- Setup -->
 @{
-    const string CURRENT_CULTURE = "sv-SE";
-
     // Get the pageName from ViewData
     var pageName = ViewData["pageName"] as string;
 
@@ -34,38 +32,12 @@
     @foreach (var item in blogSelection)
     {
         <li>
-            <h3><a href="@item.Url()">@item.Value("blogTitle")</a></h3>
-            <p>@item.Value("blogContent")</p>
-            <p><small>Publicerat av @GetAlias(item) @GetDate(item)</small></p>
+            <!-- Render all blog entries -->
+            @{
+                ViewData["isIndividualEntry"] = false;
+                ViewData["item"] = item;
+            }
+            @await Html.PartialAsync("BlogEntryPV")
         </li>
     }
 </ul>
-
-<!-- Support methods -->
-@{
-    string GetDate(IPublishedContent item)
-    {
-        var date = item.Value("blogDate") as DateTime?;
-
-        if (date == default(DateTime))
-        {
-            date = item.CreateDate;
-        }
-
-        var culture = new CultureInfo(CURRENT_CULTURE);
-
-        return date.HasValue
-            ? date.Value.ToString("yyyy-MM-dd HH:mm", culture)
-            : "";
-    }
-
-    string GetAlias(IPublishedContent item)
-    {
-        var creatorAlias = item.Value("blogEntryAlias") as string;
-
-        if (string.IsNullOrEmpty(creatorAlias))
-            creatorAlias = item.CreatorName() ?? "";
-
-        return creatorAlias;
-    }
-}

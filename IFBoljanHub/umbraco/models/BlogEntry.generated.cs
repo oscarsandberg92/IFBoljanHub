@@ -50,7 +50,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Blog Content
+		/// Innehåll: Inläggets innehåll
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
@@ -58,14 +58,22 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString BlogContent => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "blogContent");
 
 		///<summary>
-		/// Blog Date
+		/// Publiceringsdatum: Publiceringsdatum (frivilligt - om du vill skriva över det automatiskt registrerade datumet)
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
 		[ImplementPropertyType("blogDate")]
 		public virtual global::System.DateTime BlogDate => this.Value<global::System.DateTime>(_publishedValueFallback, "blogDate");
 
 		///<summary>
-		/// BlogTitle
+		/// Publiceringsalias: Alias för publicist (frivilligt - om du vill skriva över det alias som Umbraco förser)
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("blogEntryAlias")]
+		public virtual string BlogEntryAlias => this.Value<string>(_publishedValueFallback, "blogEntryAlias");
+
+		///<summary>
+		/// Rubrik: Inläggets rubrik
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
