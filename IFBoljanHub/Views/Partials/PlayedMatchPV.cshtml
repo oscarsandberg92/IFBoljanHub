@@ -1,0 +1,56 @@
+﻿@using System.Globalization;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+    // Configuration
+    const string CURRENT_CULTURE = "sv-SE";
+
+    // Get the pageName from ViewData
+    var isIndividualEntry = ViewData["isIndividualEntry"] as bool?;
+    var item = ViewData["item"] as IPublishedContent;
+
+    // Render content
+    // if (isIndividualEntry == true)
+    // {
+    //     <h2>@item!.Value("blogTitle")</h2>
+    // }
+    // else
+    // {
+    //     <h3><a href="@item!.Url()">@item!.Value("blogTitle")</a></h3>
+    // }
+
+    var teamName = "IF Böljan Falkenberg";
+    var homeMatch = item!.Value("matchHomeArena") as bool?;
+    var opponent = item!.Value("matchOpponent") as string ?? "Okänd motståndare";
+    var scoreAway = item!.Value("matchAwayScore") as int?;
+    var scoreHome = item!.Value("matchHomeScore") as int?;
+    var date = item!.Value("matchDate") as DateTime?;
+
+    <div>
+        <a href="@item!.Url()">
+            <span>@GetHomePlayer()</span>
+            <span><strong>@scoreHome</strong></span>
+            <span>-</span>
+            <span><strong>@scoreAway</strong></span>
+            <span>@GetAwayPlayer()</span>
+        </a>
+    </div>
+
+    <p><small>@GetDate()</small></p>
+
+    // Support methods
+    string GetDate()
+    {
+        var culture = new CultureInfo(CURRENT_CULTURE);
+
+        return date.HasValue
+            ? date.Value.ToString("yyyy-MM-dd HH:mm", culture)
+            : "Datum är inte tillgängligt";
+    }
+
+    string GetHomePlayer() =>
+        homeMatch == true ? teamName : opponent;
+
+    string GetAwayPlayer() =>
+        homeMatch == true ? opponent : teamName;
+}

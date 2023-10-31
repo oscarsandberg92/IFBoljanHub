@@ -17,5 +17,12 @@
             }
             @await Html.PartialAsync("BlogContent")
         </div>
+        <div class="col-md-4">
+            <!-- Display played matches -->
+            @{
+                ViewData["pageName"] = Model.Name;
+            }
+            @await Html.PartialAsync("PlayedMatchesPV")
+        </div>
     </div>
 </div>
