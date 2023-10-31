@@ -1,0 +1,101 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.LoggedIn>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+@{
+    var url = "";
+    var mediaItem = Model.Value<IPublishedContent>("heroImage");
+
+    if (mediaItem != null)
+    {
+        url = mediaItem.Url();
+    }
+}
+@{
+    DateTime now = DateTime.Now;
+    string greeting = "Välkommen"; // Default greeting
+    
+    if (now.Hour >= 5 && now.Hour < 12)
+    {
+        greeting = "Good morgon";
+    }
+    else if (now.Hour >= 12 && now.Hour < 18)
+    {
+        greeting = "Good eftermiddag";
+    }
+    else
+    {
+        greeting = "Good Kväll";
+    }
+}
+
+
+
+    <!--HERO START-->
+    <div class="text-center bg-image rounded-3" style="background-image: url(@url); width: 100vw; height: 50vh; background-size: cover;">
+        <div class="mask" style="background-color: rgba(255, 255, 255, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="container text-white">
+                    <h1 class="mb-3">@greeting</h1>
+                    <h4 class="mb-3">Välkommen till medlemsportalen! Här inne hittar du exklusivt innehåll och resurser som är skräddarsydda för våra medlemmar. Utforska våra senaste artiklar, fördjupa dina kunskaper och ta del av medlemsförmåner. Tack för att du är en del av vår gemenskap.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--HERO END-->
+        
+    <!--HOME CONTENT-->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card content-card shadow hover">
+                <img src="https://blog.twentyoverten.com/files/featured-images-60ec0df4948ae-sej-1520x800.png" class="card-img-top" alt="Card Image 1">
+                <div class="card-body">
+                    <h5 class="card-title">Skapa Innehåll</h5>
+                    <p class="card-text">Skapa nytt innehåll eller redigare befintligt.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card content-card shadow hover">
+                <img src="https://cdn.sanity.io/images/zl9du87e/production/87224d664cae76c20b60af921757aa50c76c93cf-2000x1335.jpg" class="card-img-top" alt="Card Image 2">
+                <div class="card-body">
+                    <h5 class="card-title">Dokument Arkiv</h5>
+                    <p class="card-text">I vårat dokumentarkiv hittar du alla dokument som finns uppladdade.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card content-card shadow hover">
+                <img src="https://www.shrewsburytown.com/siteassets/image/2017-18/commercial/shop/club-shop-wembley.jpg" class="card-img-top" alt="Card Image 3">
+                <div class="card-body">
+                    <h5 class="card-title">Klubbshop</h5>
+                    <p class="card-text">Titta in i våran klubbshop för att lägga beställningar.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card content-card shadow hover">
+                <img src="https://www.thielskagalleriet.se/wp-content/uploads/2013/12/Vardagsrummet-mot-matssalen-800x534.jpg" class="card-img-top" alt="Card Image 4">
+                <div class="card-body">
+                    <h5 class="card-title">Bildarkiv</h5>
+                    <p class="card-text">Alla bilder från matcher samlas här.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card content-card shadow hover">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc8HTw42ckZ3crZgR6j8M0WF4KNUbNFYwwUw&usqp=CAU" class="card-img-top" alt="Card Image 5">
+                <div class="card-body">
+                    <h5 class="card-title">Förmånssida</h5>
+                    <p class="card-text">Alla samlade förmåner för er som medlemmar finns här.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--HOME CONTENT END-->
