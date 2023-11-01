@@ -1,0 +1,43 @@
+﻿@using System.Globalization;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+<!-- Setup -->
+@{
+    // Get the pageName from ViewData
+    var pageName = ViewData["pageName"] as string;
+
+    // Select the GUID of the blog to display based on the page name
+    var playedMatchesSelectionGuid = Guid.Parse(pageName switch
+    {
+        "Herrar" => "4cc6a656-f5ee-4c5e-91a2-b2708030b183",
+        "Damer" => "7c595971-bda2-4a6d-8666-996bd1887361",
+        _ => "" // Will cause crash - maybe default to one of the above?
+    });
+
+    var playedMatchesSelection = Umbraco.Content(playedMatchesSelectionGuid)!
+        .ChildrenOfType("playedMatch")!
+        .Where(x => x.IsVisible())
+        .OrderByDescending(x => x.Value("matchDate"));
+
+    var pageTitle = Umbraco.Content(playedMatchesSelectionGuid)!.Value("playedMatchesTitle") as string;
+}
+
+<!-- Render content -->
+@if (!string.IsNullOrEmpty(pageTitle))
+{
+    <h2>@pageTitle</h2>
+}
+
+<ul class="list-unstyled">
+    @foreach (var item in playedMatchesSelection)
+    {
+        <li>
+            <!-- Render all played matches -->
+            @{
+                ViewData["isIndividualEntry"] = false;
+                ViewData["item"] = item;
+            }
+            @await Html.PartialAsync("PlayedMatchPV")
+        </li>
+    }
+</ul>

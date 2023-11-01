@@ -1,0 +1,37 @@
+﻿@using IFBoljanHub.Models;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    // Retrieve breadcrumb data
+    var breadcrumbItems = GetBreadcrumbData(Model);
+
+    // Render the breadcrumb
+    <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            @foreach (var item in breadcrumbItems)
+            {
+                <li class="breadcrumb-item">
+                    <a href="@item.Url">@item.Text</a>
+                </li>
+            }
+        </ol>
+    </nav>
+}
+
+@functions {
+    List<BreadcrumbItem> GetBreadcrumbData(IPublishedContent currentPage)
+    {
+        List<BreadcrumbItem> breadcrumbItems = new List<BreadcrumbItem>();
+
+        // Starting from the current page, traverse the hierarchy up to the home page
+        while (currentPage.Parent != null)
+        {
+            breadcrumbItems.Insert(0, new BreadcrumbItem(currentPage.Url(), currentPage.Name));
+            currentPage = currentPage.Parent;
+        }
+
+        // Add the home page to the breadcrumb
+        breadcrumbItems.Insert(0, new BreadcrumbItem(currentPage.Url(), currentPage.Name));
+
+        return breadcrumbItems;
+    }
+}
