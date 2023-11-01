@@ -19,13 +19,13 @@ using Umbraco.Extensions;
 namespace Umbraco.Cms.Web.Common.PublishedModels
 {
 	/// <summary>Spelad match</summary>
-	[PublishedModel("speladMatch")]
-	public partial class SpeladMatch : PublishedContentModel
+	[PublishedModel("playedMatch")]
+	public partial class PlayedMatch : PublishedContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
-		public new const string ModelTypeAlias = "speladMatch";
+		public new const string ModelTypeAlias = "playedMatch";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
@@ -34,14 +34,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<SpeladMatch, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<PlayedMatch, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public SpeladMatch(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
+		public PlayedMatch(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
@@ -50,40 +50,47 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
+		/// Analys: Analys av matchen (frivilligt)
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("matchAnalysis")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString MatchAnalysis => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "matchAnalysis");
+
+		///<summary>
 		/// Bortapoäng
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
-		[ImplementPropertyType("bortapoaeng")]
-		public virtual int Bortapoaeng => this.Value<int>(_publishedValueFallback, "bortapoaeng");
+		[ImplementPropertyType("matchAwayScore")]
+		public virtual int MatchAwayScore => this.Value<int>(_publishedValueFallback, "matchAwayScore");
 
 		///<summary>
-		/// Hemmapoäng
+		/// Speldatum: Datum och klockslag då matchen spelades
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
-		[ImplementPropertyType("hemmapoaeng")]
-		public virtual int Hemmapoaeng => this.Value<int>(_publishedValueFallback, "hemmapoaeng");
+		[ImplementPropertyType("matchDate")]
+		public virtual global::System.DateTime MatchDate => this.Value<global::System.DateTime>(_publishedValueFallback, "matchDate");
 
 		///<summary>
 		/// På hemmaplan?: Spelades matchen på hemmaplan?
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("homeArena")]
-		public virtual global::System.Collections.Generic.IEnumerable<string> HomeArena => this.Value<global::System.Collections.Generic.IEnumerable<string>>(_publishedValueFallback, "homeArena");
+		[ImplementPropertyType("matchHomeArena")]
+		public virtual bool MatchHomeArena => this.Value<bool>(_publishedValueFallback, "matchHomeArena");
+
+		///<summary>
+		/// Hemmapoäng
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[ImplementPropertyType("matchHomeScore")]
+		public virtual int MatchHomeScore => this.Value<int>(_publishedValueFallback, "matchHomeScore");
 
 		///<summary>
 		/// Motståndare
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("motstaandare")]
-		public virtual string Motstaandare => this.Value<string>(_publishedValueFallback, "motstaandare");
-
-		///<summary>
-		/// Speldatum: Datum och klockslag då matchen spelades
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
-		[ImplementPropertyType("speldatum")]
-		public virtual global::System.DateTime Speldatum => this.Value<global::System.DateTime>(_publishedValueFallback, "speldatum");
+		[ImplementPropertyType("matchOpponent")]
+		public virtual string MatchOpponent => this.Value<string>(_publishedValueFallback, "matchOpponent");
 	}
 }
