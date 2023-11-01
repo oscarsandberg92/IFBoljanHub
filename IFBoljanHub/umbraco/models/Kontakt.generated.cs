@@ -48,5 +48,69 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		}
 
 		// properties
+
+		///<summary>
+		/// address: Use this property to store the contact address.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("address")]
+		public virtual string Address => this.Value<string>(_publishedValueFallback, "address");
+
+		///<summary>
+		/// contactFormEmail: Use this property to capture the user's email address in the contact form.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("contactFormEmail")]
+		public virtual string ContactFormEmail => this.Value<string>(_publishedValueFallback, "contactFormEmail");
+
+		///<summary>
+		/// contactFormMessage: This property captures the user's message or inquiry in the contact form.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("contactFormMessage")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString ContactFormMessage => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "contactFormMessage");
+
+		///<summary>
+		/// contactFormName: To capture the user's name in the contact form
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("contactFormName")]
+		public virtual string ContactFormName => this.Value<string>(_publishedValueFallback, "contactFormName");
+
+		///<summary>
+		/// email: This property captures the email address for inquiries.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("email")]
+		public virtual string Email => this.Value<string>(_publishedValueFallback, "email");
+
+		///<summary>
+		/// googleMapsUrl: Use this property to store the Google Maps URL or embed code.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("googleMapsUrl")]
+		public virtual string GoogleMapsUrl => this.Value<string>(_publishedValueFallback, "googleMapsUrl");
+
+		///<summary>
+		/// header: This property captures the title of the contact page.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("header")]
+		public virtual string Header => this.Value<string>(_publishedValueFallback, "header");
+
+		///<summary>
+		/// phone: This property captures the contact phone number.
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("phone")]
+		public virtual string Phone => this.Value<string>(_publishedValueFallback, "phone");
 	}
 }
