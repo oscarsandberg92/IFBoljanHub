@@ -66,3 +66,33 @@ main {
 .secondary-background{
     background: #EDEDED;
 }
+
+/* contact css  */
+.contact-section {
+    display: flex;
+    align-items: flex-start;
+    
+    background-image: url("@Model.Value("headerImage")");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9; 
+    padding: 20px;
+    margin: 0;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.contact-info{
+    margin-top: 150px;
+    margin-left: 50px;
+}
+
+.btn-primary{
+    margin-top:10px;
+}
+}
