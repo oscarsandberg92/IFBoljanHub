@@ -32,6 +32,23 @@ main {
     padding: 0 0 0 0 !important;
 }
 
+.divHover {
+    transition: transform 300ms ease-in-out;
+}
+
+.divHover:hover {
+    transform: scale(1.02, 1.02);
+}
+
+
+.content-card {
+        background-size: cover;
+        background-position: center;
+        
+        padding: 0px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
 .footer-background{
     background: #0054A6;
 }

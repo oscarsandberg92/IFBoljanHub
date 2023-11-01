@@ -1,0 +1,66 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.LoginPage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+@{
+    var url = "";
+    var mediaItem = Model.Value<IPublishedContent>("heroImage");
+
+    if (mediaItem != null)
+    {
+        url = mediaItem.Url();
+    }
+}
+
+<div>
+    <!--HERO START-->
+    <div class="text-center bg-image rounded-3" style="background-image: url(@url); width: 100vw; height: auto; background-size: cover;">
+        <div class="mask" style="background-color: rgba(255, 255, 255, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="container text-black">
+                 
+                    <div class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="card mt-5">
+                <div class="card-body shadow secondary-background">
+                    <h1 class="card-title text-center mb-4">Logga in</h1>
+                    
+                        <div class="form-group">
+                            <label class="control-label mb-1">E-post Adress:</label>
+                            <input class="form-control" />
+                            
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label mt-4 mb-1">Lösenord:</label>
+                            <input type="password" class="form-control" />
+                            
+                        </div>
+                        <div class="form-group d-flex justify-content-between mt-2">
+                            <p>Inte medlem ännu?<br> 
+                            <a href="#">Registrera dig här</a>
+                            </p>
+                            <a href="/inloggad/"><button class="btn btn-primary">Logga in</button></a>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                    
+                    
+                    
+                    <!--- LOGIN FORM END ---> 
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--HERO END-->
+   
+    <!--HOME CONTENT-->
+   
+    <!--HOME CONTENT END-->
+    </div>

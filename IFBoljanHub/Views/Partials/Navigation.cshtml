@@ -28,15 +28,19 @@
             <ul class="navbar-nav me-5 mb-2 mb-lg-0">
                 @if (menuItems?.Length > 0)
                 {
+                
                     @foreach (var item in menuItems)
                     {
-                        <li class="nav-item mx-1">
-                            <a class="nav-link active header" aria-current="page" href="@item.Url(PublishedUrlProvider)">@item.Name</a>
-                        </li>
+                        @if(item is LoginPage) continue;  <!--- MOVING THE LOGGIN BUTTON TO A BUTTON ---> 
+                        @if(item is LoggedIn) continue;   <!--- MOVING THE LINK TO HIDDEN IN DEVELOPMENT ---> 
+                        
+                            <li class="nav-item mx-1">
+                                <a class="nav-link active header" aria-current="page" href="@item.Url(PublishedUrlProvider)">@item.Name</a>
+                            </li>
                     }
                 }
             </ul>
-            <button class="btn btn-primary" type="submit">Logga in</button>
+            <a href="/logga-in/"><button class="btn btn-primary" type="submit">Logga in</button></a>
         </div>
     </div>
     <button onClick="toggleLogo()" class="navbar-toggler align-self-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
