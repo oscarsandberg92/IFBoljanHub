@@ -18,7 +18,7 @@
 }
 
 @{
-	var selection = Umbraco.Content(Guid.Parse("ff7c3bd2-680f-4cff-92ac-49823245c3c8"))
+	var selection = Umbraco.Content(Guid.Parse("106b60f1-b34a-45e9-883e-955707cef4f5"))
     .ChildrenOfType("lagPresentation")
     .Where(x => x.IsVisible())
     .OrderBy(x => x.Name);
