@@ -1,8 +1,9 @@
-﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+﻿@using System.Globalization;
+@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.HomePage>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
 }
 @{
     var url = "";
@@ -26,12 +27,38 @@
             </div>
         </div>
     </div>
-        <!--HERO END-->
-   
-    <!--HOME CONTENT-->
-    <div class="bg-white">
-        <h1>@Model.Value("headerText")</h1>
-        <h4>@Model.Value("bodyText")</h4>
+    <!--HERO END-->
+
+
+    <div class="row text-center" style="height: 200px;">
+            <h2>@Model.Value("upcomingGamesTitle")</h2>
+        <div class="container d-flex gap-3 justify-content-center align-items-center">
+            <div class="text-center">
+                <h5>@Model.Value("mensNextGameTitle")</h5>
+                <h4>@Model.Value("mensNextOpponent")</h4>
+                <p>@FormatDate(Model.Value("mensNextGameDate") as DateTime?)</p>
+                <p>@GetLocation(Model.Value("mensNextGameLocation") as bool?)</p>
+            </div>
+            <div class="text-center">
+                <h5>@Model.Value("womensNextGameTitle")</h5>
+                <h4>@Model.Value("womensNextOpponent")</h4>
+                <p>@FormatDate(Model.Value("womensNextGameDate") as DateTime?)</p>
+                <p>@GetLocation(Model.Value("womensNextGameLocation") as bool?)</p>
+            </div>
+        </div>
     </div>
-    <!--HOME CONTENT END-->
 </div>
+
+@functions{
+    string GetLocation(bool? value) =>
+        value == true ? "Hemma" : "Borta";
+
+    string FormatDate(DateTime? date)
+    {
+        var culture = new CultureInfo("sv-SE");
+
+        return date.HasValue
+            ? date.Value.ToString("yyyy-MM-dd HH:mm", culture)
+            : "Datum är inte tillgängligt";
+    }
+}
