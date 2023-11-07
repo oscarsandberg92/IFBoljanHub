@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="Umbraco.Cms" Version="12.2.0" />
+    <PackageReference Include="Umbraco.Community.FullCalendar.Block" Version="1.0.3" />
   </ItemGroup>
 
   <ItemGroup>
