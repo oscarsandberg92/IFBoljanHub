@@ -112,4 +112,10 @@ main {
 .btn-primary{
     margin-top:10px;
 }
+
+.img-fluid {
+    max-width: 100%; /* Ensures the image doesn't exceed its container width */
+    height: auto;    /* Maintains the image's aspect ratio */
+    
 }
+
