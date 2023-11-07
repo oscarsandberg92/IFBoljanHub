@@ -2,11 +2,27 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Herr>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
 }
 
-<!--THE ONLY PURPOSE OF THE CODE BELOW IS TO SHOW PAGE NAME. REMOVE WHEN TIME COMES :D-->
-<div class="min-vw-100 align-middle text-center">
-    <div class="p-5"></div>
-    <h1 class="align-middle">@Model.Name</h1>
+<br />
+<br />
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8">
+            <!-- Display the blog -->
+            @{
+                ViewData["pageName"] = Model.Name;
+            }
+            @await Html.PartialAsync("BlogContent")
+        </div>
+        <div class="col-md-4">
+            <!-- Display played matches -->
+            @{
+                ViewData["pageName"] = Model.Name;
+            }
+            @await Html.PartialAsync("PlayedMatchesPV")
+        </div>
+    </div>
 </div>
