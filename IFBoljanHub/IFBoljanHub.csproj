@@ -5,6 +5,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\FullCalendar.BlockItem\css\fullcalendar.min.css" />
+    <Content Include="App_Plugins\FullCalendar.BlockItem\fullcalendar-controller.js" />
+    <Content Include="App_Plugins\FullCalendar.BlockItem\fullcalendar-resources.js" />
+    <Content Include="App_Plugins\FullCalendar.BlockItem\fullCalendar.html" />
+    <Content Include="App_Plugins\FullCalendar.BlockItem\package.manifest" />
+    <Content Include="App_Plugins\FullCalendar.BlockItem\scripts\fullcalendar.min.js" />
+    <Content Include="App_Plugins\FullCalendar.BlockItem\scripts\moment.min.js" />
+    <Content Include="App_Plugins\FullCalendar.BlockItem\scripts\ui-calendar.min.js" />
     <Content Include="wwwroot\media\1imoi2bm\hero-image.jpg" />
     <Content Include="wwwroot\media\3fwhpkpq\hero-image-cropped.jpg" />
     <Content Include="wwwroot\media\tdpgrfj3\_genlogga.png" />
@@ -12,7 +20,6 @@
 
   <ItemGroup>
     <PackageReference Include="Umbraco.Cms" Version="12.2.0" />
-    <PackageReference Include="Umbraco.Community.FullCalendar.Block" Version="1.0.3" />
   </ItemGroup>
 
   <ItemGroup>
