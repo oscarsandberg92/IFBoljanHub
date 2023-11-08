@@ -68,12 +68,20 @@ main {
 }
 
 .logotype {
-    height: 10rem;
-    width: 10rem;
     z-index: 99;
     position: absolute;
     top: 1rem;
     left: 1rem;
+}
+
+.logotype-homepage {
+    height: 10rem;
+    width: 10rem;
+}
+
+.logotype-subpage {
+    height: 5em;
+    width: 5em;
 }
 
 .nav-link {
@@ -94,6 +102,14 @@ main {
 
 .sitemap {
     margin: 0 20%;
+}
+
+.sitemap a{
+    text-decoration: none;
+}
+
+.sitemap a:hover{
+    text-decoration: underline;
 }
 
 .socialmedia-logo{
