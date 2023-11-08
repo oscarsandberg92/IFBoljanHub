@@ -62,10 +62,14 @@
     <div class="row py-4 w-100">
         <div class="container-fluid">
             <ul class="list-unstyled d-flex sitemap justify-content-between">
+                <li class="nav-item mx-1">
+                    <a class="text-dark text-unstyled" aria-current="page" href="@Model.Root().Url()">Hem</a>
+                </li>
+
                 @foreach (var navigation in navigations)
                 {
                     if (navigation is LoggedIn || navigation is LoginPage) continue;
-                    <li><a class="text-dark text-unstyled text-decoration-none" href="@navigation.Url()">@navigation.Name</a></li>
+                    <li><a class="text-dark text-unstyled" href="@navigation.Url()">@navigation.Name</a></li>
                 }
             </ul>
         </div>
