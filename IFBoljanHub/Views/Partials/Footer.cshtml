@@ -68,7 +68,7 @@
 
                 @foreach (var navigation in navigations)
                 {
-                    if (navigation is LoggedIn || navigation is LoginPage) continue;
+                    if (navigation is LoggedIn || navigation is LoginPage || navigation is Blog) continue;
                     <li><a class="text-dark text-unstyled" href="@navigation.Url()">@navigation.Name</a></li>
                 }
             </ul>

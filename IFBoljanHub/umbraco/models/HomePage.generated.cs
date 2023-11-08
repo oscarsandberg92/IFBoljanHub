@@ -96,5 +96,81 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("logo")]
 		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops Logo => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "logo");
+
+		///<summary>
+		/// Datum och tid: Datum och tid matchen ska spelas
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[ImplementPropertyType("mensNextGameDate")]
+		public virtual global::System.DateTime MensNextGameDate => this.Value<global::System.DateTime>(_publishedValueFallback, "mensNextGameDate");
+
+		///<summary>
+		/// På hemmaplan?
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[ImplementPropertyType("mensNextGameLocation")]
+		public virtual bool MensNextGameLocation => this.Value<bool>(_publishedValueFallback, "mensNextGameLocation");
+
+		///<summary>
+		/// Rubrik
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("mensNextGameTitle")]
+		public virtual string MensNextGameTitle => this.Value<string>(_publishedValueFallback, "mensNextGameTitle");
+
+		///<summary>
+		/// Klubbnamn: Namnet på mötande klubb
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("mensNextOpponent")]
+		public virtual string MensNextOpponent => this.Value<string>(_publishedValueFallback, "mensNextOpponent");
+
+		///<summary>
+		/// Motståndarlagets logotyp: Ladda upp en bild av motståndarlagets logotyp
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("mensOpponentLogo")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops MensOpponentLogo => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "mensOpponentLogo");
+
+		///<summary>
+		/// Datum och tid: Datum och tid matchen ska spelas
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[ImplementPropertyType("womensNextGameDate")]
+		public virtual global::System.DateTime WomensNextGameDate => this.Value<global::System.DateTime>(_publishedValueFallback, "womensNextGameDate");
+
+		///<summary>
+		/// På hemmaplan?: Vart spelas matchen?
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[ImplementPropertyType("womensNextGameLocation")]
+		public virtual bool WomensNextGameLocation => this.Value<bool>(_publishedValueFallback, "womensNextGameLocation");
+
+		///<summary>
+		/// Rubrik
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("womensNextGameTitle")]
+		public virtual string WomensNextGameTitle => this.Value<string>(_publishedValueFallback, "womensNextGameTitle");
+
+		///<summary>
+		/// Klubbnamn: Namnet på mötande klubb
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("womensNextOpponent")]
+		public virtual string WomensNextOpponent => this.Value<string>(_publishedValueFallback, "womensNextOpponent");
+
+		///<summary>
+		/// Motståndarlagets logotyp: Ladda upp en bild av motståndarlagets logotyp
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "12.2.0+173d8dc")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("womensOpponentLogo")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops WomensOpponentLogo => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "womensOpponentLogo");
 	}
 }
