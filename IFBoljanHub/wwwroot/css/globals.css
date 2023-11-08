@@ -22,10 +22,42 @@ main {
 .btn-primary {
     background: #004499 !important;
     border-style: none !important;
+    margin-top:10px;
 }
 
 .btn-primary:hover {
     background: #dc7100 !important;
+}
+
+/* contact css  */
+.contact-section {
+    display: flex;
+    align-items: flex-start;
+    background-image: url("@Model.Value("headerImage")");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9; 
+    padding: 20px;
+    margin: 0;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.contact-info{
+    margin-top: 150px;
+    margin-left: 50px;
+}
+
+.content-card {
+    background-size: cover;
+    background-position: center;
+    padding: 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .container-fluid{
@@ -40,17 +72,8 @@ main {
     transform: scale(1.02, 1.02);
 }
 
-
-.content-card {
-        background-size: cover;
-        background-position: center;
-        
-        padding: 0px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-.footer-background{
-    background: #0054A6;
+.footer-col{
+    padding: 0 0 0 2rem !important;
 }
 
 .header {
@@ -58,10 +81,14 @@ main {
     font-weight: bold;
 }
 
+.hr-margin hr{
+    margin: 0 20%;
+    opacity: 0.1;
+}
+
 .logotype {
     height: 10rem;
     width: 10rem;
-
     z-index: 99;
     position: absolute;
     top: 1rem;
@@ -84,33 +111,26 @@ main {
     background: #EDEDED;
 }
 
-/* contact css  */
-.contact-section {
-    display: flex;
-    align-items: flex-start;
-    
-    background-image: url("@Model.Value("headerImage")");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.9; 
-    padding: 20px;
-    margin: 0;
+.sitemap {
+    margin: 0 20%;
 }
 
-.contact-info, .contact-form {
-    flex: 1;
-    padding: 10px;
-    box-sizing: border-box;
+.socialmedia-logo{
+    max-height: 2rem;
+    max-width: 2rem;
+    margin: 0 0.5rem;
 }
 
-.contact-info{
-    margin-top: 150px;
-    margin-left: 50px;
+.sponsor-logo{
+    max-height: 4rem;
+    max-width: 4rem;
+    width: 100%;
 }
 
-.btn-primary{
-    margin-top:10px;
+@media screen and (max-width: 768px){
+    .sitemap {
+        margin: 0 10%;
+    }
 }
 
 .img-fluid {
@@ -135,4 +155,5 @@ main {
         border-right: none;
         border-top: 1px solid #ccc;
     }
+
 }
