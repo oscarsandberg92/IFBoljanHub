@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-*{
+
+* {
     font-family: 'Roboto' sans-serif !important;
-    font-size:0.9rem;
+    font-size: 0.9rem;
 }
 
 body {
@@ -24,11 +25,11 @@ main {
     border-style: none !important;
 }
 
-.btn-primary:hover {
-    background: #dc7100 !important;
-}
+    .btn-primary:hover {
+        background: #dc7100 !important;
+    }
 
-.container-fluid{
+.container-fluid {
     padding: 0 0 0 0 !important;
 }
 
@@ -36,20 +37,19 @@ main {
     transition: transform 300ms ease-in-out;
 }
 
-.divHover:hover {
-    transform: scale(1.02, 1.02);
-}
+    .divHover:hover {
+        transform: scale(1.02, 1.02);
+    }
 
 
 .content-card {
-        background-size: cover;
-        background-position: center;
-        
-        padding: 0px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+    background-size: cover;
+    background-position: center;
+    padding: 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-.footer-background{
+.footer-background {
     background: #0054A6;
 }
 
@@ -61,7 +61,6 @@ main {
 .logotype {
     height: 10rem;
     width: 10rem;
-
     z-index: 99;
     position: absolute;
     top: 1rem;
@@ -72,44 +71,24 @@ main {
     color: #004499 !important;
 }
 
-.nav-link:hover {
-    color: #dc7100 !important;
+    .nav-link:hover {
+        color: #dc7100 !important;
+    }
+
+.primary-background {
+    background: #000000;
 }
 
-.primary-background{
- background: #000000;   
-}
-
-.secondary-background{
+.secondary-background {
     background: #EDEDED;
 }
 
-/* contact css  */
-.contact-section {
-    display: flex;
-    align-items: flex-start;
-    
-    background-image: url("@Model.Value("headerImage")");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.9; 
-    padding: 20px;
-    margin: 0;
+.btn-primary {
+    margin-top: 10px;
 }
 
-.contact-info, .contact-form {
-    flex: 1;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.contact-info{
-    margin-top: 150px;
-    margin-left: 50px;
-}
-
-.btn-primary{
-    margin-top:10px;
-}
+@media (max-width: 767px) {
+    .responsive-map {
+        width: 100%;
+    }
 }

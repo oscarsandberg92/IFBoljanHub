@@ -6,6 +6,7 @@
     Layout = "Master.cshtml";
 }
 @{
+
     var url = "";
     var mediaItem = Model.Value<IPublishedContent>("heroImage");
 
@@ -15,43 +16,174 @@
     }
 }
 
-<div>
-    <!--HERO START-->
-    <div class="text-center bg-image rounded-3" style="background-image: url(@url); width: 100vw; height: 50vh; background-size: cover;">
-        <div class="mask" style="background-color: rgba(255, 255, 255, 0.6);">
-            <div class="d-flex justify-content-center align-items-center h-100">
-                <div class="container text-white">
-                    <h1 class="mb-3">@Model.Value("heroHeader")</h1>
-                    <h4 class="mb-3">@Model.Value("heroText")</h4>
+<!--HERO START-->
+<div class="text-center bg-image rounded-3" style="background-image: url(@url); width: 100%; height: 50vh; background-size: cover;">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="container text-white">
+                <h1 class="mb-3">@Model.Value("heroHeader")</h1>
+                <h4 class="mb-3">@Model.Value("heroText")</h4>
+            </div>
+        </div>
+</div>
+<!--HERO END-->
+@{
+    var mensOppenentLogo = Model.Value<IPublishedContent>("mensOpponentLogo");
+    var womensOppenentLogo = Model.Value<IPublishedContent>("womensOpponentLogo");
+    var ourLogo = Model.Value<IPublishedContent>("logo");
+    var mensHomeTeamLogo = GetHomeTeamLogo((bool)Model.Value("mensNextGameLocation")!, ourLogo, mensOppenentLogo);
+    var mensAwayTeamLogo = GetAwayTeamLogo((bool)Model.Value("mensNextGameLocation")!, ourLogo, mensOppenentLogo);
+    var womensHomeTeamLogo = GetHomeTeamLogo((bool)Model.Value("womensNextGameLocation")!, ourLogo, womensOppenentLogo);
+    var womensAwayTeamLogo = GetAwayTeamLogo((bool)Model.Value("womensNextGameLocation")!, ourLogo, womensOppenentLogo);
+    var mensHomeTeam = GetHomeTeam((bool)Model.Value("mensNextGameLocation")!, (string)Model.Value("mensNextOpponent")!);
+    var mensAwayTeam = GetAwayTeam((bool)Model.Value("mensNextGameLocation")!, (string)Model.Value("mensNextOpponent")!);
+    var womensHomeTeam = GetHomeTeam((bool)Model.Value("womensNextGameLocation")!, (string)Model.Value("womensNextOpponent")!);
+    var womensAwayTeam = GetAwayTeam((bool)Model.Value("womensNextGameLocation")!, (string)Model.Value("womensNextOpponent")!);
+}
+
+<div class="section secondary-background py-4">
+    <div class="d-flex justify-content-evenly">
+        <!-- Mens next game -->
+        <div class="col-md-4 col-sm-4">
+            <!-- Title and date -->
+            <div class="text-center">
+                <h5 class="text-truncate">@Model.Value("mensNextGameTitle")</h5>
+                <p>@FormatDate(Model.Value("mensNextGameDate") as DateTime?)</p>
+            </div>
+            <!-- Teams -->
+            <div class="text-center row">
+                <!-- Mens home team -->
+                <div class="col">
+                    <img src="@mensHomeTeamLogo!.Url()" width="50" height="50" class="mx-auto mb-1" />
+                    <h4 class="text-truncate">@mensHomeTeam</h4>
+                </div>
+                <!-- Mens away team -->
+                <div class="col">
+                    <img src="@mensAwayTeamLogo!.Url()" width="50" height="50" class="mx-auto mb-1" />
+                    <h4 class="text-truncate">@mensAwayTeam</h4>
                 </div>
             </div>
         </div>
-    </div>
-    <!--HERO END-->
-
-
-    <div class="row text-center" style="height: 200px;">
-            <h2>@Model.Value("upcomingGamesTitle")</h2>
-        <div class="container d-flex gap-3 justify-content-center align-items-center">
+        <!-- Womens next game -->
+        <div class="col-md-4 col-sm-4">
+            <!-- Title and date -->
             <div class="text-center">
-                <h5>@Model.Value("mensNextGameTitle")</h5>
-                <h4>@Model.Value("mensNextOpponent")</h4>
-                <p>@FormatDate(Model.Value("mensNextGameDate") as DateTime?)</p>
-                <p>@GetLocation(Model.Value("mensNextGameLocation") as bool?)</p>
-            </div>
-            <div class="text-center">
-                <h5>@Model.Value("womensNextGameTitle")</h5>
-                <h4>@Model.Value("womensNextOpponent")</h4>
+                <h5 class="text-truncate">@Model.Value("womensNextGameTitle")</h5>
                 <p>@FormatDate(Model.Value("womensNextGameDate") as DateTime?)</p>
-                <p>@GetLocation(Model.Value("womensNextGameLocation") as bool?)</p>
+            </div>
+            <!-- Teams -->
+            <div class="text-center row">
+                <!-- Womens home team -->
+                <div class="col">
+                    <img src="@womensHomeTeamLogo!.Url()" width="50" height="50" class="mx-auto mb-1" />
+                    <h4 class="text-truncate">@womensHomeTeam</h4>
+                </div>
+                <!-- Womens away team -->
+                <div class="col">
+                    <img src="@womensAwayTeamLogo!.Url()" width="50" height="50" class="mx-auto mb-1" />
+                    <h4 class="text-truncate">@womensAwayTeam</h4>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-@functions{
-    string GetLocation(bool? value) =>
-        value == true ? "Hemma" : "Borta";
+@* <div class="section secondary-background py-4">
+    <div class="row justify-content-evenly">
+        <!-- Mens next game -->
+        <div class="col-md-4 col-sm-4">
+            <!-- Title and date -->
+            <div class="text-center">
+                <h5 class="text-truncate">@Model.Value("mensNextGameTitle")</h5>
+                <p>@FormatDate(Model.Value("mensNextGameDate") as DateTime?)</p>
+            </div>
+            <!-- Teams -->
+            <div class="text-center row">
+                <!-- Mens home team -->
+                <div class="col">
+                    <img src="@mensHomeTeamLogo!.Url()" width="50" height="50" class="mx-auto" />
+                    <h4 class="text-truncate">@mensHomeTeam</h4>
+                </div>
+                <!-- Mens away team -->
+                <div class="col">
+                    <img src="@mensAwayTeamLogo!.Url()" width="50" height="50" class="mx-auto" />
+                    <h4 class="text-truncate">@mensAwayTeam</h4>
+                </div>
+            </div>
+        </div>
+        <!-- Womens next game -->
+        <div class="col-md-4 col-sm-4">
+            <!-- Title and date -->
+            <div class="text-center">
+                <h5 class="text-truncate">@Model.Value("womensNextGameTitle")</h5>
+                <p>@FormatDate(Model.Value("womensNextGameDate") as DateTime?)</p>
+            </div>
+            <!-- Teams -->
+            <div class="text-center row">
+                <!-- Womens home team -->
+                <div class="col">
+                    <img src="@womensHomeTeamLogo!.Url()" width="50" height="50" class="mx-auto" />
+                    <h4 class="text-truncate">@womensHomeTeam</h4>
+                </div>
+                <!-- Womens away team -->
+                <div class="col">
+                    <img src="@womensAwayTeamLogo!.Url()" width="50" height="50" class="mx-auto" />
+                    <h4 class="text-truncate">@womensAwayTeam</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+
+@* <div class="section secondary-background py-4">
+    <div class="row justify-content-evenly">
+        <!-- Mens next game -->
+        <div class="col-md-4">
+            <!-- Title and date -->
+            <div class="text-center">
+                <h5 class="text-truncate">@Model.Value("mensNextGameTitle")</h5>
+                <p>@FormatDate(Model.Value("mensNextGameDate") as DateTime?)</p>
+            </div>
+            <!-- Teams -->
+            <div class="text-center row">
+                <!-- Mens home team -->
+                <div class="col">
+                    <img src="@mensHomeTeamLogo!.Url()" width="50" height="50" class="mx-auto d-block" />
+                    <h4 class="text-truncate">@mensHomeTeam</h4>
+                </div>
+                <!-- Mens away team -->
+                <div class="col">
+                    <img src="@mensAwayTeamLogo!.Url()" width="50" height="50" class="mx-auto d-block" />
+                    <h4 class="text-truncate">@mensAwayTeam</h4>
+                </div>
+            </div>
+        </div>
+        <!-- Womens next game -->
+        <div class="col-md-4">
+            <!-- Title and date -->
+            <div class="text-center">
+                <h5 class="text-truncate">@Model.Value("womensNextGameTitle")</h5>
+                <p>@FormatDate(Model.Value("womensNextGameDate") as DateTime?)</p>
+            </div>
+            <!-- Teams -->
+            <div class="text-center row">
+                <!-- Mens home team -->
+                <div class="col">
+                    <img src="@womensHomeTeamLogo!.Url()" width="50" height="50" class="mx-auto d-block" />
+                    <h4 class="text-truncate">@womensHomeTeam</h4>
+                </div>
+                <!-- Mens away team -->
+                <div class="col">
+                    <img src="@womensAwayTeamLogo!.Url()" width="50" height="50" class="mx-auto d-block" />
+                    <h4 class="text-truncate">@womensAwayTeam</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+@functions {
+    const string HOME_TEAM = "IF Böljan Falkenberg";
 
     string FormatDate(DateTime? date)
     {
@@ -61,4 +193,16 @@
             ? date.Value.ToString("yyyy-MM-dd HH:mm", culture)
             : "Datum är inte tillgängligt";
     }
+
+    string GetHomeTeam(bool gameIsAtHome, string opponentTeamName) =>
+        gameIsAtHome == true ? HOME_TEAM : opponentTeamName;
+
+    string GetAwayTeam(bool gameIsAtHome, string opponentTeamName) =>
+        gameIsAtHome == true ? opponentTeamName : HOME_TEAM;
+
+    IPublishedContent? GetHomeTeamLogo(bool gameIsAtHome, IPublishedContent? ourLogo, IPublishedContent? opponentLogo) =>
+        gameIsAtHome == true ? ourLogo : opponentLogo;
+
+    IPublishedContent? GetAwayTeamLogo(bool gameIsAtHome, IPublishedContent? ourLogo, IPublishedContent? opponentLogo) =>
+        gameIsAtHome == true ? opponentLogo : ourLogo;
 }
