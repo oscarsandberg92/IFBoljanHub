@@ -1,7 +1,73 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 
-<div class="text-center text-lg-start footer-background text-white mt-auto">
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
-        <p>© 2023 Copyright: Grupp 1</p>
+@{
+    string logotypesFolderId = "484b74fc-7b0d-43ac-bf78-1118d992698c";
+    string sponsorsFolderId = "cb2f3743-0c88-4d6b-88ec-9efd591ea528";
+
+    // Socialmedia
+    List<IPublishedContent> logotypes= Umbraco.Media(logotypesFolderId)
+                                        .Children()
+                                        .OrderBy(x => x.Name)
+                                        .ToList();
+    // Sponsors
+    List<IPublishedContent> sponsors = Umbraco.Media(sponsorsFolderId)
+                                        .Children()
+                                        .ToList();
+    // Sitemap Items
+    List<IPublishedContent> navigations = Model.Root().Children.ToList();
+}
+
+@*FOOTER*@
+<div class="secondary-background">
+    @*SPONSORS AND SOCIAL MEDIA LINKS*@
+    <div class="row mx-0 py-4 w-100">
+        <!--SPONSORS-->
+        <div class="col-md-8 flex-wrap"> 
+            <div class="row mx-auto">
+                <div class="d-flex flex-wrap py-2 h-100 justify-content-evenly">
+                    @foreach(var sponsor in sponsors)
+                    {
+                        if(sponsor is Image)
+                        {
+                            <div class="mx-3 px-1 px-xs-0 col-2 col-xs-2 col-sm-2 col-md-2 col-lg-1">
+                                <img class="sponsor-logo" src="@sponsor.Url()" alt="@sponsor.Name">
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+        <!--SPONSORS END-->
+        <!--SOCIAL MEDIA AND ADDRESS-->
+        <div class="col-md-4">
+            <!--SOCIAL MEDIA-->
+            <div class="row max-w-50">
+                <div class="d-flex p-2 justify-content-center">
+                    @foreach(var logo in logotypes){
+                     if(logo is Image)
+                     {
+                        <a href="#" target="_blank"><img class="socialmedia-logo" src="@logo.Url()" alt="@logo.Name"></a>
+                     }
+                    }
+                </div>
+            </div>
+            <!--SOCIAL MEDIA END-->
+        </div>
+        <!--SOCIAL MEDIA AND ADDRESS END-->
+    </div>
+    <div class="hr-margin">
+        <hr>
+    </div>
+    @* SITEMAP *@
+    <div class="row py-4 w-100">
+        <div class="container-fluid">
+            <ul class="list-unstyled d-flex sitemap justify-content-between">
+                @foreach (var navigation in navigations)
+                {
+                    if (navigation is LoggedIn || navigation is LoginPage) continue;
+                    <li><a class="text-dark text-unstyled text-decoration-none" href="@navigation.Url()">@navigation.Name</a></li>
+                }
+            </ul>
+        </div>
     </div>
 </div>

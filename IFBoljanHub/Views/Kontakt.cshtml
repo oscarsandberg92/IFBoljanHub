@@ -1,8 +1,15 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Kontakt>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using IFBoljanHub.Models
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = "Master.cshtml";
+}
+
+@{
+    var coachClass = new CoachClass();
+    var coaches = coachClass.GetAllCoaches();
 }
 
 <br />

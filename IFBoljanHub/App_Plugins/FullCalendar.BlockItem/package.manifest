@@ -1,0 +1,14 @@
+{
+  "name": "FullCalendar Block View",
+  "version": "1.0.1",
+  "javascript": [
+    "~/App_Plugins/FullCalendar.BlockItem/scripts/fullcalendar.min.js",
+    "~/App_Plugins/FullCalendar.BlockItem/scripts/moment.min.js",
+    "~/App_Plugins/FullCalendar.BlockItem/scripts/ui-calendar.min.js",
+    "~/App_Plugins/FullCalendar.BlockItem/fullcalendar-controller.js",
+    "~/App_Plugins/FullCalendar.BlockItem/fullcalendar-resources.js"
+  ],
+  "css": [
+    "~/App_Plugins/FullCalendar.BlockItem/css/fullcalendar.min.css"
+  ]
+}

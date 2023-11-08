@@ -1,0 +1,18 @@
+Index: IFBoljanHub/appsettings.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"$schema\": \"appsettings-schema.json\",\r\n  \"Serilog\": {\r\n    \"MinimumLevel\": {\r\n      \"Default\": \"Information\",\r\n      \"Override\": {\r\n        \"Microsoft\": \"Warning\",\r\n        \"Microsoft.Hosting.Lifetime\": \"Information\",\r\n        \"System\": \"Warning\"\r\n      }\r\n    }\r\n  },\r\n  \"Umbraco\": {\r\n    \"CMS\": {\r\n      \"Global\": {\r\n        \"Id\": \"075199cb-7728-4489-afb1-6da199f9df09\",\r\n        \"SanitizeTinyMce\": true\r\n      },\r\n      \"Content\": {\r\n        \"AllowEditInvariantFromNonDefault\": true,\r\n        \"ContentVersionCleanupPolicy\": {\r\n          \"EnableCleanup\": true\r\n        }\r\n      },\r\n      \"Unattended\": {\r\n        \"UpgradeUnattended\": true\r\n      },\r\n      \"ModelsBuilder\": {\r\n        \"ModelsMode\": \"SourceCodeManual\"\r\n      }\r\n    }\r\n  } \r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/IFBoljanHub/appsettings.json b/IFBoljanHub/appsettings.json
+--- a/IFBoljanHub/appsettings.json	(revision b0161bda8d6ba49052a926d9483bdd2958444a68)
++++ b/IFBoljanHub/appsettings.json	(date 1699027134752)
+@@ -29,5 +29,5 @@
+         "ModelsMode": "SourceCodeManual"
+       }
+     }
+-  } 
++  }
+ }
+\ No newline at end of file

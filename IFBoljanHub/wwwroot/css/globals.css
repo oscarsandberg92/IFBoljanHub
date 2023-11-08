@@ -23,11 +23,12 @@ main {
 .btn-primary {
     background: #004499 !important;
     border-style: none !important;
+    margin-top:10px;
 }
 
-    .btn-primary:hover {
-        background: #dc7100 !important;
-    }
+.btn-primary:hover {
+    background: #dc7100 !important;
+}
 
 .container-fluid {
     padding: 0 0 0 0 !important;
@@ -37,10 +38,9 @@ main {
     transition: transform 300ms ease-in-out;
 }
 
-    .divHover:hover {
-        transform: scale(1.02, 1.02);
-    }
-
+.divHover:hover {
+    transform: scale(1.02, 1.02);
+}
 
 .content-card {
     background-size: cover;
@@ -53,9 +53,18 @@ main {
     background: #0054A6;
 }
 
+.footer-col{
+    padding: 0 0 0 2rem !important;
+}
+
 .header {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.hr-margin hr{
+    margin: 0 20%;
+    opacity: 0.1;
 }
 
 .logotype {
@@ -71,9 +80,9 @@ main {
     color: #004499 !important;
 }
 
-    .nav-link:hover {
-        color: #dc7100 !important;
-    }
+.nav-link:hover {
+    color: #dc7100 !important;
+}
 
 .primary-background {
     background: #000000;
@@ -83,12 +92,48 @@ main {
     background: #EDEDED;
 }
 
-.btn-primary {
-    margin-top: 10px;
+.sitemap {
+    margin: 0 20%;
 }
 
-@media (max-width: 767px) {
+.socialmedia-logo{
+    max-height: 2rem;
+    max-width: 2rem;
+    margin: 0 0.5rem;
+}
+
+.sponsor-logo{
+    max-height: 4rem;
+    max-width: 4rem;
+    width: 100%;
+}
+
+.img-fluid {
+    max-width: 100%; /* Ensures the image doesn't exceed its container width */
+    height: auto;    /* Maintains the image's aspect ratio */
+}
+
+.responsive-line {
+    border-right: 1px solid #ccc;
+    border-top: none;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+    
+@media screen and (max-width: 768px){
+  .sitemap {
+      margin: 0 10%;
+  }
+    .responsive-line {
+      border-right: none;
+      border-top: 1px solid #ccc;
+  }
     .responsive-map {
-        width: 100%;
-    }
+      width: 100%;
+  }
 }

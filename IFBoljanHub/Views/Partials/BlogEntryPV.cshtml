@@ -9,6 +9,25 @@
     var isIndividualEntry = ViewData["isIndividualEntry"] as bool?;
     var item = ViewData["item"] as IPublishedContent;
 
+    // Modify blogContent to apply "responsive-image" class to all images
+    var blogContent = item!.Value("blogContent");
+
+    // Modify blogContent to apply "responsive-image" class to all images
+    var doc = new HtmlAgilityPack.HtmlDocument();
+    doc.LoadHtml(blogContent.ToString());
+
+    var imgTags = doc.DocumentNode.SelectNodes("//img");
+    if (imgTags != null)
+    {
+        foreach (var imgTag in imgTags)
+        {
+            imgTag.AddClass("responsive-image");
+        }
+    }
+
+    // Get the modified HTML content
+    var modifiedContent = doc.DocumentNode.OuterHtml;
+
     // Render content
     if (isIndividualEntry == true)
     {
@@ -16,9 +35,9 @@
     }
     else
     {
-        <h3><a href="@item!.Url()">@item!.Value("blogTitle")</a></h3>
+        <a href="@item!.Url()"><h4>@item!.Value("blogTitle")</h4></a>
     }
-    <p>@item!.Value("blogContent")</p>
+    <p>@Html.Raw(modifiedContent)</p>
     <p><small>Publicerat av @GetAlias() @GetDate()</small></p>
 
     // Support methods

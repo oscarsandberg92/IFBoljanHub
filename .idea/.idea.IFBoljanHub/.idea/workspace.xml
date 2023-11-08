@@ -8,7 +8,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66a7f34a-c362-4ea4-841c-44f8c53b62b8" name="Changes" comment="" />
+    <list default="true" id="66a7f34a-c362-4ea4-841c-44f8c53b62b8" name="Changes" comment="">
+
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.IFBoljanHub/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IFBoljanHub/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Blog.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Blog.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/BlogEntry.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/BlogEntry.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/File.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/File.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Folder.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Folder.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Herr.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Herr.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/HomePage.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/HomePage.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Image.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Image.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Juniorer.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Juniorer.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Kontakt.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Kontakt.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LagPresentation.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LagPresentation.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LoggedIn.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LoggedIn.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LoginPage.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LoginPage.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Member.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Member.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/PlayedMatch.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/PlayedMatch.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/SpeladeMatcher.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/SpeladeMatcher.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaArticle.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaArticle.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaAudio.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaAudio.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaVectorGraphics.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaVectorGraphics.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaVideo.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaVideo.generated.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IFBoljanHub/uSync/v9/Content/kalender_lzsciclq.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IFBoljanHub/uSync/v9/ContentTypes/kalendersida.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/KalenderSida.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.IFBoljanHub/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IFBoljanHub/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/IFBoljanHub.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/IFBoljanHub.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/Views/CalendarPage.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/Views/CalendarPage.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/uSync/v9/Content/inloggad.config" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/uSync/v9/Content/inloggad.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/uSync/v9/Content/kontakt.config" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/uSync/v9/Content/kontakt.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/uSync/v9/Content/logga-in.config" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/uSync/v9/Content/logga-in.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/uSync/v9/ContentTypes/calendarpage.config" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/uSync/v9/ContentTypes/calendarpage.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/uSync/v9/ContentTypes/homepage.config" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/uSync/v9/ContentTypes/homepage.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/uSync/v9/DataTypes/CalendarPageBlockGridBlockGrid.config" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/uSync/v9/DataTypes/CalendarPageBlockGridBlockGrid.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/CalendarPage.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/CalendarPage.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/FullCalendar.generated.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbBlockGridDemoHeadlineBlock.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbBlockGridDemoHeadlineBlock.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbBlockGridDemoImageBlock.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbBlockGridDemoImageBlock.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbBlockGridDemoRichTextBlock.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbBlockGridDemoRichTextBlock.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbBlockGridDemoTwoColumnLayoutBlock.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbBlockGridDemoTwoColumnLayoutBlock.generated.cs" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/ood.flag" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,13 +60,16 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="development" />
+        <entry key="$PROJECT_DIR$" value="contact_update" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/danst/source/repos/IFBoljanHub/IFBoljanHub/umbraco/models/Blog.generated.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/danst/source/repos/IFBoljanHub/IFBoljanHub/Views/CalendarPage.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/danst/source/repos/IFBoljanHub/IFBoljanHub/Views/CalendarPage.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/danst/source/repos/IFBoljanHub/IFBoljanHub/Views/CalendarPage.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/danst/source/repos/IFBoljanHub/IFBoljanHub/Views/CalendarPage.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -35,12 +81,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Junior__Content",
+    "git-widget-placeholder": "dennis__senior__design",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -48,15 +95,28 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;development__1&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\danst\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\danst\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\danst\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\danst\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\danst\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\danst\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.IFBoljanHub: IIS Express">
     <configuration name="IFBoljanHub: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/IFBoljanHub/IFBoljanHub.csproj" />
@@ -102,6 +162,9 @@
       <workItem from="1698665070865" duration="6945000" />
       <workItem from="1698839039457" duration="1316000" />
       <workItem from="1699007732767" duration="1215000" />
+      <workItem from="1699039634391" duration="3068000" />
+      <workItem from="1699351469359" duration="2582000" />
+      <workItem from="1699360955034" duration="2180000" />
     </task>
     <task id="LOCAL−00001" summary="LoginPage added&#10;Content page to come">
       <option name="closed" value="true" />
@@ -138,7 +201,14 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1698840015693</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Update to Coaches">
+      <option name="closed" value="true" />
+      <created>1699041203447</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1699041203447</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +233,7 @@
     <MESSAGE value="Logged in" />
     <MESSAGE value="Stash" />
     <MESSAGE value="Fix!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix!" />
+    <MESSAGE value="Update to Coaches" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update to Coaches" />
   </component>
 </project>

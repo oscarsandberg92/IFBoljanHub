@@ -45,7 +45,11 @@
         @foreach (var item in selection)
         {
             var trainerMediaItem = item.Value<IPublishedContent>("trainerImage");
-            var trainerImageUrl = trainerMediaItem.Url();
+            var trainerImageUrl = "";
+            if (trainerMediaItem != null)
+            {
+                trainerImageUrl = trainerMediaItem.Url();
+            }
 
             <div class="col-md-6">
                 <div class="bg-light shadow m-3 p-1 divHover">
