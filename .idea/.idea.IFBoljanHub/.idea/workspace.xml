@@ -8,7 +8,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66a7f34a-c362-4ea4-841c-44f8c53b62b8" name="Changes" comment="" />
+    <list default="true" id="66a7f34a-c362-4ea4-841c-44f8c53b62b8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/IFBoljanHub/Models/Coach.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IFBoljanHub/Models/CoachClass.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.IFBoljanHub/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IFBoljanHub/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/Views/Kontakt.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/Views/Kontakt.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Blog.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Blog.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/BlogEntry.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/BlogEntry.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/File.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/File.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Folder.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Folder.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Herr.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Herr.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/HomePage.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/HomePage.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Image.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Image.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Juniorer.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Juniorer.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Kontakt.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Kontakt.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LagPresentation.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LagPresentation.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LoggedIn.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LoggedIn.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LoginPage.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LoginPage.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Member.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Member.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/PlayedMatch.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/PlayedMatch.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/SpeladeMatcher.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/SpeladeMatcher.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaArticle.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaArticle.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaAudio.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaAudio.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaVectorGraphics.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaVectorGraphics.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaVideo.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaVideo.generated.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +64,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Junior__Content",
+    "git-widget-placeholder": "contact__update",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -102,6 +126,7 @@
       <workItem from="1698665070865" duration="6945000" />
       <workItem from="1698839039457" duration="1316000" />
       <workItem from="1699007732767" duration="1215000" />
+      <workItem from="1699039634391" duration="1114000" />
     </task>
     <task id="LOCAL−00001" summary="LoginPage added&#10;Content page to come">
       <option name="closed" value="true" />

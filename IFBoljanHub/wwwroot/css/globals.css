@@ -132,3 +132,9 @@ main {
         margin: 0 10%;
     }
 }
+
+.img-fluid {
+    max-width: 100%; /* Ensures the image doesn't exceed its container width */
+    height: auto;    /* Maintains the image's aspect ratio */
+    
+}
