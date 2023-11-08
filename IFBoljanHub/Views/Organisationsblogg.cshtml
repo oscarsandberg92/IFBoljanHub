@@ -1,6 +1,5 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage;
-
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
 	Layout = "Master.cshtml";
 }
@@ -16,9 +15,7 @@
 
             <!-- Display the blog -->
             @{
-                var pageName = Model.Parent!.Name;
-                if (pageName == "Home") pageName = "Organisationsblogg";
-                ViewData["pageName"] = pageName;
+                ViewData["pageName"] = "Organisationsblogg";
             }
             @await Html.PartialAsync("BlogContent")
         </div>
