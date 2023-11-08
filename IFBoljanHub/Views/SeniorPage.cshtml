@@ -1,0 +1,36 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Herr>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    Layout = "Master.cshtml";
+}
+
+<br />
+<br />
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8 order-1 order-md-0 responsive-line">
+            <!-- Display the team picture -->
+            @{
+                var teamPicture = Model.Value<IPublishedContent>("teamPicture");
+            }
+            @if (teamPicture != null)
+            {
+                <img src="@teamPicture.Url()" alt="Gruppbild på uppställd trupp" class="img-fluid mb-2" style="max-height: 300px; width: 100%; height: auto; object-fit: cover;">
+            }
+            <!-- Display the blog -->
+            @{
+                ViewData["pageName"] = Model.Name;
+            }
+            @await Html.PartialAsync("BlogContent")
+        </div>
+        <div class="col-md-4 order-0 order-md-1">
+            <!-- Display played matches -->
+            @{
+                ViewData["pageName"] = Model.Name;
+            }
+            @await Html.PartialAsync("PlayedMatchesPV")
+        </div>
+    </div>
+</div>

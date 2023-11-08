@@ -1,0 +1,69 @@
+﻿@using System.Globalization;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+    // Configuration
+    const string CURRENT_CULTURE = "sv-SE";
+
+    // Get the pageName from ViewData
+    var isIndividualEntry = ViewData["isIndividualEntry"] as bool?;
+    var item = ViewData["item"] as IPublishedContent;
+
+    // Modify blogContent to apply "responsive-image" class to all images
+    var blogContent = item!.Value("blogContent");
+
+    // Modify blogContent to apply "responsive-image" class to all images
+    var doc = new HtmlAgilityPack.HtmlDocument();
+    doc.LoadHtml(blogContent.ToString());
+
+    var imgTags = doc.DocumentNode.SelectNodes("//img");
+    if (imgTags != null)
+    {
+        foreach (var imgTag in imgTags)
+        {
+            imgTag.AddClass("responsive-image");
+        }
+    }
+
+    // Get the modified HTML content
+    var modifiedContent = doc.DocumentNode.OuterHtml;
+
+    // Render content
+    if (isIndividualEntry == true)
+    {
+        <h2>@item!.Value("blogTitle")</h2>
+    }
+    else
+    {
+        <a href="@item!.Url()"><h4>@item!.Value("blogTitle")</h4></a>
+    }
+    <p>@Html.Raw(modifiedContent)</p>
+    <p><small>Publicerat av @GetAlias() @GetDate()</small></p>
+
+    // Support methods
+    string GetDate()
+    {
+        var date = item!.Value("blogDate") as DateTime?;
+
+        if (date == default(DateTime))
+        {
+            date = item!.CreateDate;
+        }
+
+        var culture = new CultureInfo(CURRENT_CULTURE);
+
+        return date.HasValue
+            ? date.Value.ToString("yyyy-MM-dd HH:mm", culture)
+            : "";
+    }
+
+    string GetAlias()
+    {
+        var creatorAlias = item!.Value("blogEntryAlias") as string;
+
+        if (string.IsNullOrEmpty(creatorAlias))
+            creatorAlias = item!.CreatorName() ?? "";
+
+        return creatorAlias;
+    }
+}

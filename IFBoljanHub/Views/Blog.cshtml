@@ -1,0 +1,26 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage;
+
+@{
+	Layout = "Master.cshtml";
+}
+
+<br />
+<br />
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-8">
+            <!-- Display breadcrumbs -->
+            @await Html.PartialAsync("Breadcrumbs")
+
+            <!-- Display the blog -->
+            @{
+                var pageName = Model.Parent!.Name;
+                if (pageName == "Home") pageName = "Organisationsblogg";
+                ViewData["pageName"] = pageName;
+            }
+            @await Html.PartialAsync("BlogContent")
+        </div>
+    </div>
+</div>

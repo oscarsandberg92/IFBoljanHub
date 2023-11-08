@@ -1,0 +1,67 @@
+﻿@using System.Globalization;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+    // Configuration
+    const string CURRENT_CULTURE = "sv-SE";
+
+    // Get the pageName from ViewData
+    var isIndividualEntry = ViewData["isIndividualEntry"] as bool?;
+    var item = ViewData["item"] as IPublishedContent;
+
+    // Get match details
+    var teamName = "IF Böljan Falkenberg";
+    var homeMatch = item!.Value("matchHomeArena") as bool?;
+    var opponent = item!.Value("matchOpponent") as string ?? "Okänd motståndare";
+    var scoreAway = item!.Value("matchAwayScore") as int?;
+    var scoreHome = item!.Value("matchHomeScore") as int?;
+    var date = item!.Value("matchDate") as DateTime?;
+
+    // Render content
+    if (isIndividualEntry == true)
+    {
+        var analysis = item!.Value("matchAnalysis");
+        // Full match details (full page view)
+        <div>
+            <h3>
+                <span>@GetHomePlayer()</span>
+                <span><strong>@scoreHome</strong></span>
+                <span>-</span>
+                <span><strong>@scoreAway</strong></span>
+                <span>@GetAwayPlayer()</span>
+            </h3>
+            <p>@GetDate()</p>
+            <p>@analysis</p>
+        </div>
+    }
+    else
+    {
+        // Short match details (list view)
+        <div>
+            <a href="@item!.Url()">
+                <span>@GetHomePlayer()</span>
+                <span><strong>@scoreHome</strong></span>
+                <span>-</span>
+                <span><strong>@scoreAway</strong></span>
+                <span>@GetAwayPlayer()</span>
+            </a>
+            <p><small>@GetDate()</small></p>
+        </div>
+    }
+
+    // Support methods
+    string GetDate()
+    {
+        var culture = new CultureInfo(CURRENT_CULTURE);
+
+        return date.HasValue
+            ? date.Value.ToString("yyyy-MM-dd HH:mm", culture)
+            : "Datum är inte tillgängligt";
+    }
+
+    string GetHomePlayer() =>
+        homeMatch == true ? teamName : opponent;
+
+    string GetAwayPlayer() =>
+        homeMatch == true ? opponent : teamName;
+}

@@ -1,0 +1,44 @@
+﻿@using System.Globalization;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+<!-- Setup -->
+@{
+    // Get the pageName from ViewData
+    var pageName = ViewData["pageName"] as string;
+
+    // Select the GUID of the blog to display based on the page name
+    var blogSelectionGuid = Guid.Parse(pageName switch
+    {
+        "Herrar" => "f12d0f8c-875f-4189-955f-e202cca8b6e5",
+        "Damer" => "6a4be89c-2f9a-46c5-86b6-120f8e7d0a49",
+        "Organisationsblogg" => "e241601e-a1e4-4b29-bf45-85853aa59c39",
+        _ => "" // Will cause crash - maybe default to one of the above?
+    });
+
+    var blogSelection = Umbraco.Content(blogSelectionGuid)!
+        .ChildrenOfType("blogEntry")!
+        .Where(x => x.IsVisible())
+        .OrderByDescending(x => x.CreateDate);
+
+    var blogTitle = Umbraco.Content(blogSelectionGuid)!.Value("blogTitle") as string;
+}
+
+<!-- Render content -->
+@if (!string.IsNullOrEmpty(blogTitle))
+{
+    <h2>@blogTitle</h2>
+}
+
+<ul class="list-unstyled">
+    @foreach (var item in blogSelection)
+    {
+        <li>
+            <!-- Render all blog entries -->
+            @{
+                ViewData["isIndividualEntry"] = false;
+                ViewData["item"] = item;
+            }
+            @await Html.PartialAsync("BlogEntryPV")
+        </li>
+    }
+</ul>

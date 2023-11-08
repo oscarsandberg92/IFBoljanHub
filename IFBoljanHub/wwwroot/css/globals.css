@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto' sans-serif !important;
+    font-size: 0.9rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    z-index: 0;
+}
+
+main {
+    flex: 1;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background: #004499 !important;
+    border-style: none !important;
+    margin-top:10px;
+}
+
+.btn-primary:hover {
+    background: #dc7100 !important;
+}
+
+.container-fluid {
+    padding: 0 0 0 0 !important;
+}
+
+.divHover {
+    transition: transform 300ms ease-in-out;
+}
+
+.divHover:hover {
+    transform: scale(1.02, 1.02);
+}
+
+.content-card {
+    background-size: cover;
+    background-position: center;
+    padding: 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-background {
+    background: #0054A6;
+}
+
+.footer-col{
+    padding: 0 0 0 2rem !important;
+}
+
+.header {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.hr-margin hr{
+    margin: 0 20%;
+    opacity: 0.1;
+}
+
+.logotype {
+    z-index: 99;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.logotype-homepage {
+    height: 10rem;
+    width: 10rem;
+}
+
+.logotype-subpage {
+    height: 5em;
+    width: 5em;
+}
+
+.nav-link {
+    color: #004499 !important;
+}
+
+.nav-link:hover {
+    color: #dc7100 !important;
+}
+
+.primary-background {
+    background: #000000;
+}
+
+.secondary-background {
+    background: #EDEDED;
+}
+
+.sitemap {
+    margin: 0 20%;
+}
+
+.sitemap a{
+    text-decoration: none;
+}
+
+.sitemap a:hover{
+    text-decoration: underline;
+}
+
+.socialmedia-logo{
+    max-height: 2rem;
+    max-width: 2rem;
+    margin: 0 0.5rem;
+}
+
+.sponsor-logo{
+    max-height: 4rem;
+    max-width: 4rem;
+    width: 100%;
+}
+
+.img-fluid {
+    max-width: 100%; /* Ensures the image doesn't exceed its container width */
+    height: auto;    /* Maintains the image's aspect ratio */
+}
+
+.responsive-line {
+    border-right: 1px solid #ccc;
+    border-top: none;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+    
+@media screen and (max-width: 768px){
+  .sitemap {
+      margin: 0 10%;
+  }
+    .responsive-line {
+      border-right: none;
+      border-top: 1px solid #ccc;
+  }
+    .responsive-map {
+      width: 100%;
+  }
+}

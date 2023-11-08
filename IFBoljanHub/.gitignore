@@ -476,4 +476,7 @@ appsettings-schema.*.json
 /umbraco/Logs/
 
 # Media files
-/wwwroot/media/
+# /wwwroot/media/ Note: Not sure if this should be included or not. Media added to the project is placed in this folder.
+
+# Smidge
+/Smidge

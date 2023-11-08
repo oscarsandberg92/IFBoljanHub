@@ -1,0 +1,78 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+	
+	var url = "";
+    var mediaItem = Model.Value<IPublishedContent>("headerImage");
+    
+    
+
+
+
+    if (mediaItem != null)
+    {
+        url = mediaItem.Url();
+    }
+}
+
+@{
+	var selection = Umbraco.Content(Guid.Parse("106b60f1-b34a-45e9-883e-955707cef4f5"))
+    .ChildrenOfType("lagPresentation")
+    .Where(x => x.IsVisible())
+    .OrderBy(x => x.Name);
+}
+
+
+
+    <!--HERO START-->
+    <div class="text-center bg-image rounded-3" style="background-image: url(@url); width: 100vw; height: 30vh; background-size: cover;">
+ 
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="container text-white">
+                    <h1 class="mb-3">@Model.Value("headerTitle")</h1>
+                    <h4 class="mb-3">@Model.Value("headerText")</h4>
+                </div>
+            </div>
+
+    </div>
+        <!--HERO END-->
+        
+        
+<div class="container">
+    <div class="d-flex justify-content-center align-items-center flex-wrap">
+        @foreach (var item in selection)
+        {
+            var trainerMediaItem = item.Value<IPublishedContent>("trainerImage");
+            var trainerImageUrl = "";
+            if (trainerMediaItem != null)
+            {
+                trainerImageUrl = trainerMediaItem.Url();
+            }
+
+            <div class="col-md-6">
+                <div class="bg-light shadow m-3 p-1 divHover">
+                    <div class="row">
+                        <div class="col-4">
+                            <!-- Content for the left column -->
+                            <img src="@trainerImageUrl" alt="Trainer Image" width="80px" height="120px">
+                        </div>
+                        <div class="col-8">
+                            <!-- Content for the middle column -->
+                            <h4>@item.Value("lagNamnOchAar")</h4>
+                            <p>@item.Value("lagInformation")</p>
+                            
+                            <p style="color: grey;">Läs mer...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+        
+        
+

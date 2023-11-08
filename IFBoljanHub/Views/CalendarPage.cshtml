@@ -1,0 +1,132 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.CalendarPage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+@{
+    var url = "";
+    var mediaItem = Model.Value<IPublishedContent>("heroImage");
+
+    if (mediaItem != null)
+    {
+        url = mediaItem.Url();
+    }
+    
+}
+
+<div>
+    <!--HERO START-->
+    <div class="text-center bg-image rounded-3" style="background-image: url(@url); width: 100vw; height: 30vh; background-size: cover;">
+        <div class="mask" style="background-color: rgba(255, 255, 255, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="container text-white">
+                    <h1 class="mb-3">@Model.Value("heroHeader")</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--HERO END-->
+<div class="container mb-4">
+    @{
+    
+    var today = DateTime.Now;
+    var startTime = new DateTime(today.Year, today.Month, today.Day, 19, 0, 0);
+    var startTimeIso = startTime.ToString("yyyy-MM-ddTHH:mm:ss");
+    var events = new List<object>
+    {
+        new
+        {
+            title = "Träning Herr",
+            start = startTimeIso,
+            end = startTime.AddHours(2).ToString("yyyy-MM-ddTHH:mm:ss"),
+            description = "Löpträning"
+        },
+        new
+        {
+            title = "Städning",
+            start = startTimeIso,
+            end = "2023-11-30",
+            description = "Se schema"
+        },
+        new
+        {
+            title = "Match Dam",
+            start = startTimeIso,
+            end = startTime.AddHours(2).ToString("yyyy-MM-ddTHH:mm:ss"),
+            description = "Match borta mot Falkenberg FF"
+        }
+    };
+
+    var eventsJson = Newtonsoft.Json.JsonConvert.SerializeObject(events);
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" />
+
+<div id='calendar' class="mt-3"></div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script> <!--Using this to be able to render the calendar without feeding it with events-->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/sv.js" defer></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        (function($) {
+            var calendarEl = document.getElementById('calendar');
+            if (calendarEl) {
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    firstDay: '1',
+                    dayHeaderFormat: { weekday: 'short' },
+                    locale: 'svLocale',
+                    selectable: false,
+                    buttonText: {
+                        month: "M\xE5nad",
+                        week: "Vecka",
+                        day: "Dag",
+                        today: "Idag",
+                        year: "År"
+                    },
+                    buttonHints: {
+                        prev: function (buttonText) {
+                            return "F\xF6reg\xE5ende ".concat(buttonText.toLocaleLowerCase());
+                        },
+                        next: function (buttonText) {
+                            return "N\xE4sta ".concat(buttonText.toLocaleLowerCase());
+                        },
+                        today: function (buttonText) {
+                            return (buttonText === "Program" ? "Detta" : "Denna") + " " + buttonText.toLocaleLowerCase();
+                        }
+                    },
+                    viewHint: "$0 vy",
+                    allDayText: 'Heldag',
+                    headerToolbar: {
+                        start: 'prevYear,prev,next,nextYear today',
+                        end: 'listMonth,listWeek,listDay'
+                    },
+                    events: @Html.Raw(eventsJson),
+                    initialView: 'listMonth',
+                    eventClick: function(info) {
+                        MakePageBusy();
+                        info.jsEvent.preventDefault();
+                    },
+                    select: function(info) {
+                        alert('selected ' + info.startStr + ' to ' + info.endStr);
+                    },
+                    eventDidMount: function(info) {
+                        $(info.el).popover({
+                            title: info.event.title,
+                            content: info.event.extendedProps.description,
+                            placement: "top",
+                            trigger: "hover",
+                            container: "body"
+                        });
+                    }
+                });
+                calendar.render();
+            }
+        })(jQuery);
+    });
+</script>
+
+
+</div>
+</div>
