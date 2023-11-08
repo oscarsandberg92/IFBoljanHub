@@ -9,10 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66a7f34a-c362-4ea4-841c-44f8c53b62b8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/IFBoljanHub/Models/Coach.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IFBoljanHub/Models/CoachClass.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.IFBoljanHub/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IFBoljanHub/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IFBoljanHub/Views/Kontakt.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/Views/Kontakt.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Blog.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Blog.generated.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/BlogEntry.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/BlogEntry.generated.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/File.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/File.generated.cs" afterDir="false" />
@@ -32,6 +30,7 @@
       <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaAudio.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaAudio.generated.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaVectorGraphics.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaVectorGraphics.generated.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaVideo.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaVideo.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/ood.flag" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +63,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "contact__update",
+    "git-widget-placeholder": "dennis__senior__design",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
