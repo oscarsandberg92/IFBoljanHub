@@ -15,6 +15,10 @@ main {
     flex: 1;
 }
 
+.footer-col{
+    padding: 0 0 0 2rem !important;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -56,6 +60,27 @@ main {
 .header {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.hr-margin hr{
+    margin: 0 20%;
+    opacity: 0.1;
+}
+
+.sitemap {
+    margin: 0 20%;
+}
+
+.socialmedia-logo{
+    max-height: 2rem;
+    max-width: 2rem;
+    margin: 0 0.5rem;
+}
+
+.sponsor-logo{
+    max-height: 4rem;
+    max-width: 4rem;
+    width: 100%;
 }
 
 .logotype {
@@ -112,4 +137,31 @@ main {
 .btn-primary{
     margin-top:10px;
 }
+
+.vertical-divider {
+    display: block;
+    height: 100%;
+    width:1px;
+    margin: auto 0.5em;
+    border: 0.5px solid grey;
+    opacity: 0.25;
+}
+
+.divider hr{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+    .divider hr{
+        display: block;
+        opacity: 0.2;
+    }
+    
+    .vertical-divider{
+    display: none;
+}
+}
+
+.sitemap {
+    margin: 0 10%;
 }
