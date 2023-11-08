@@ -119,3 +119,20 @@ main {
     
 }
 
+.responsive-line {
+    border-right: 1px solid #ccc;
+    border-top: none;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .responsive-line {
+        border-right: none;
+        border-top: 1px solid #ccc;
+    }
+}
