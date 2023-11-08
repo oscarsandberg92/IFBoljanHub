@@ -9,6 +9,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66a7f34a-c362-4ea4-841c-44f8c53b62b8" name="Changes" comment="">
+
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.IFBoljanHub/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.IFBoljanHub/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Blog.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Blog.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/BlogEntry.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/BlogEntry.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/File.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/File.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Folder.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Folder.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Herr.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Herr.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/HomePage.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/HomePage.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Image.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Image.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Juniorer.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Juniorer.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Kontakt.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Kontakt.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LagPresentation.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LagPresentation.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LoggedIn.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LoggedIn.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LoginPage.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/LoginPage.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Member.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/Member.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/PlayedMatch.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/PlayedMatch.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/SpeladeMatcher.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/SpeladeMatcher.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaArticle.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaArticle.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaAudio.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaAudio.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaVectorGraphics.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaVectorGraphics.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaVideo.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbracoMediaVideo.generated.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/IFBoljanHub/uSync/v9/Content/kalender_lzsciclq.config" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/IFBoljanHub/uSync/v9/ContentTypes/kalendersida.config" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/KalenderSida.generated.cs" afterDir="false" />
@@ -27,6 +49,7 @@
       <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbBlockGridDemoImageBlock.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbBlockGridDemoImageBlock.generated.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbBlockGridDemoRichTextBlock.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbBlockGridDemoRichTextBlock.generated.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbBlockGridDemoTwoColumnLayoutBlock.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/UmbBlockGridDemoTwoColumnLayoutBlock.generated.cs" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/IFBoljanHub/umbraco/models/ood.flag" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +81,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dennis__senior__design",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
