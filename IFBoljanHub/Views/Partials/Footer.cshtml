@@ -13,10 +13,13 @@
     List<IPublishedContent> sponsors = Umbraco.Media(sponsorsFolderId)
                                         .Children()
                                         .ToList();
-
+    // Sitemap Items
     List<IPublishedContent> navigations = Model.Root().Children.ToList();
 }
+
+@*FOOTER*@
 <div class="secondary-background">
+    @*SPONSORS AND SOCIAL MEDIA LINKS*@
     <div class="row mx-0 py-4 w-100">
         <!--SPONSORS-->
         <div class="col-md-8 flex-wrap"> 
@@ -35,15 +38,6 @@
             </div>
         </div>
         <!--SPONSORS END-->
-        <!--DIVIDER-->
-        @* <div class="col-md-1 divider">
-            <!--HORIZONTAL DIVIDER-->
-            <hr>
-            <!--VERTICAL DIVIDER-->
-            <div class="vertical-divider mx-auto">
-            </div>
-        </div> *@
-        <!--DIVIDER END-->
         <!--SOCIAL MEDIA AND ADDRESS-->
         <div class="col-md-4">
             <!--SOCIAL MEDIA-->
@@ -63,7 +57,6 @@
     </div>
     <div class="hr-margin">
         <hr>
-
     </div>
     @* SITEMAP *@
     <div class="row py-4 w-100">
